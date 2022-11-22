@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    background: rgb(242, 252, 255);
+    font-size: 1.2rem;
+}
+
+button, button::after {
+    transition: all 0.3s;
+}
+
+button {
+  background: #cea3ff;
+  border: 0.2em solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 1em auto;
+  padding: 0.3em 0.5em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+button:hover {
+  color: #cea3ff;
+  background: #fff;
+  border-color: #cea3ff;
+}
+
+input:focus {
+    outline: none;
+    background: rgb(242, 255, 242);
+}
+
+.hide {
+    display: none;
+}
+
+.account-box {
+    margin: auto;
+    background-color: rgb(241, 241, 241);
+    border: 0.1em dashed black;
+    border-radius: 1em;
+    height: 40rem;
+    width: 40rem;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.failure-message,
+.pwlimit-message,
+.mismatch-message,
+.misnumber-message,
+.misage-message,
+.misaddress-message {
+    color: red;
+}
+
+.success-message,
+.pwallow-message,
+.match-message,
+.number-message {
+    color: blue;
+}
+
+.condition {
+    color: rgb(73, 73, 73);
+}
+
+button[type=submit],
+input[type=submit] {
+    background-color: black;
+    color: #fff;
+    border-radius: 1rem;
+    width: 6rem;
+    font-size: 1rem;
+    padding: 0.3rem;
+    display: block;
+    margin: 0.5em auto;
+}

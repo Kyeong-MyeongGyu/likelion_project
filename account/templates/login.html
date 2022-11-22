@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/account.css' %}">
+    <title>로그인</title>
+</head>
+<body>
+    <button type="button" onclick="location.href=`{% url 'main' %}`">메인페이지</button>
+    <button type="button" onclick="location.href=`{% url 'signup' %}`">회원가입</button>
+    <div class="account-box" style="width: 25rem; height: 18rem;">    
+        <h1>로그인</h1>
+        {% if msg %} 
+            <p style="color: red;">{{msg}}</p>
+        {% endif %}
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">로그인</button>
+        </form>
+    </div>
+</body>
+</html>
