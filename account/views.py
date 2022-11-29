@@ -1,7 +1,3 @@
-from ast import Pass
-from multiprocessing import context
-from multiprocessing.reduction import duplicate
-from nntplib import NNTPPermanentError
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import auth, messages
 from django.contrib.auth import login as auth_login
@@ -9,8 +5,6 @@ from django.contrib.auth import authenticate
 from .forms import CustomUserChangeForm, User
 from account.forms import CustomUserCreationForm
 from .models import User
-from cashbookapp.models import Cashbook
-from cashbookapp.views import write
 from django.contrib.auth import get_user_model, update_session_auth_hash
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
