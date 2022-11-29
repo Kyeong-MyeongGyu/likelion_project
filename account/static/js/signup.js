@@ -24,6 +24,7 @@ let ageCheck = 1
 let addressCheck = 1
 
 elJoinbutton.disabled = true;
+elJoinbutton.style.backgroundColor = "gainsboro";
 
 elInputUsername.onkeyup = function () {
     if (isMoreThan4Length(elInputUsername.value)) {
@@ -170,7 +171,7 @@ elAddresstype.addEventListener('keyup', button)
 function button() {
     switch (!(elInputUsername.value && elInputPassword.value && elInputPasswordretype.value && elNumbertype.value
         && elInputPassword.value === elInputPasswordretype.value && usernameCheck == phonenumberCheck == ageCheck == addressCheck == 1)) {
-            case true : elJoinbutton.disabled = true; break;
-            case false : elJoinbutton.disabled = false; break;
+            case true : elJoinbutton.disabled = true; elJoinbutton.style.backgroundColor = "gainsboro"; break;
+            case false : elJoinbutton.disabled = false; elJoinbutton.style.backgroundColor = "black"; break;
     }
 }
